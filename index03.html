@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/echarts.js"></script>
+</head>
+<body>
+<div class="nav pageW">
+    <div class="logo">个人知识库</div>
+    <div class="nav-list">
+        <a href="index.html">首页</a>
+        <a href="index01.html">工具</a>
+        <a href="index02.html">学习</a>
+        <a href="index03.html" class="active">生活</a>
+        <a href="index04.html">资源</a>
+    </div>
+    <div class="search">
+        <input type="text" name="" placeholder="搜索知识">
+        <button>搜索</button>
+    </div>
+</div>
+<div class="life pageW">
+    <table>
+        <tr>
+            <td rowspan="3" width="100"><h2>个人生活</h2></td>
+            <td><div class="resume-img"><img src="images/jj.png" alt=""></div></td>
+            <td><div class="resume-text">
+                <p>本学期主修的全媒体运营、新媒体用户分析、新媒体交互设计、文化创意与营销、多媒介叙事以及视觉文化等课程带给我非常不一样的体验。</p>
+                <p>我在校期间积极参与多项活动，积累了丰富的实践经验。我还担任了党委宣传部下社团的编辑，负责公众号的推送策划与编辑工作，参与了大型活动的协调和宣传，有多篇稿件在校公众号平台上发表，点击量破万。我的性格开朗，善于沟通，生活方面，我喜欢通过阅读和画画来放松自己～</p>
+            </div></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"><h3>生活兴趣图谱</h3></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <div id="main" style="width: 600px;height:400px;"></div>
+                <script>
+                    var myChart = echarts.init(document.getElementById('main'));
+
+                    // 指定图表的配置项和数据
+                    var option = {
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: '{a} <br/>{b} : {c} ({d}%)'
+                        },
+                        series: [
+                            {
+                                name: '生活兴趣图谱',
+                                type: 'pie',
+                                itemStyle:{
+                                    normal:{
+                                        label:{
+                                            show:true,
+                                            position:'inner',
+                                            formatter:'{b}{d}%',
+                                            distance:0.5,//标识距离中心点的距离
+                                            textStyle:{
+                                                align:'center',
+                                                baseline:'middle',
+                                                fontSize:14,
+                                                fontWeight:'bolder'
+                                            }
+                                        },
+                                        labelLine:{
+                                            show:false
+                                        }
+                                    }
+                                },
+
+                                data: [
+                                    {
+                                        value: 20,
+                                        name: '阅读'
+                                    },
+                                    {
+                                        value: 20,
+                                        name: '画画'
+                                    },
+                                    {
+                                        value: 15,
+                                        name: '音乐'
+                                    },
+                                    {
+                                        value: 10,
+                                        name: '看电影'
+                                    },
+                                    {
+                                        value: 10,
+                                        name: '养宠'
+                                    },
+                                    {
+                                        value: 25,
+                                        name: '美食'
+                                    }
+                                ]
+                            }
+                        ]
+                    };
+
+                    // 使用刚指定的配置项和数据显示图表。
+                    myChart.setOption(option);
+                </script>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="foot">
+    &copy; 朱晨阳个人知识库. Forever Young
+</div>
+</body>
+</html>

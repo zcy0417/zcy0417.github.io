@@ -1,0 +1,247 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+a {text-decoration: none; color: #000000;}
+ul,ol {list-style: none;}
+.pageW {width: 1200px; margin: 0 auto;}
+
+.nav {
+    display: flex;
+    gap: 30px;
+    padding: 10px 0;
+    align-items: center;
+}
+.nav .logo {
+    font-size: 30px;
+}
+.nav .nav-list {
+    display: flex;
+    gap: 40px;
+    font-size: 18px;
+}
+.nav .nav-list a:hover,
+.nav .nav-list a.active {
+    color: #299cf6;
+}
+.nav .search {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav .search input {
+    height: 40px;
+    padding-left: 10px;
+}
+.nav .search button {
+    border: 1px solid #666666;
+    height: 40px;
+    width: 60px;
+    background: #ffffff;
+}
+.banner {
+    height: 350px;
+}
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 355px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.carousel .carouse-left,
+.carousel .carouse-right{
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 80px;
+    background: rgba(0, 0, 0, .3);
+    text-align: center;
+    line-height: 80px;
+    color: #fff;
+    font-size: 28px;
+    z-index: 2;
+    animation: opacityChange .6s ease-in-out;
+    left: 0;
+}
+@keyframes opacityChange {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.carousel .carouse-right{
+    left: unset;
+    right: 0%;
+}
+.carousel ul{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1000%;
+    height: 100%;
+}
+.carousel ul li{
+    float:left;
+    width: 10%;
+    height: 100%;
+}
+.carousel ul li img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carousel .circle {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+}
+.carousel .circle li {
+    width: 20px;
+    height: 4px;
+    background: #ffffff;
+    border-radius: 2px;
+    /*鼠标经过显示小手*/
+    cursor: pointer;
+}
+.carousel .current {
+    background-color: #777777!important;
+}
+.main-index {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+}
+.main-nav {
+    width: 22%;
+    background: #f1f1f1;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 10px;
+}
+.main-nav h2 {
+    font-weight: normal;
+}
+.main-nav .knowledge-list {
+    margin-top: 10px;
+}
+.main-nav .knowledge-list li a {
+    padding: 10px 0;
+    display: block;
+}
+.main-nav .knowledge-list li a:hover {
+    color: #299cf6;
+}
+.main-con {
+    width: 74%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+.main-con .item {
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.main-con .item h2{
+    font-weight: normal;
+    font-size: 22px;
+}
+.main-con .item p {
+    padding: 10px 0;
+    font-size: 15px;
+    color: #666666;
+}
+.main-con .item a {
+    background: #299cf6;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+.main-con .item a:hover {
+    opacity: .7;
+}
+.foot {
+    background: #f1f1f1;
+    text-align: center;
+    padding: 20px 0;
+}
+.sources {
+    border: 1px solid #e1e1e1;
+    margin: 20px auto 40px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+th {
+    border: 1px solid #e1e1e1;
+    text-align: left;
+    padding: 10px 10px;
+}
+td {
+    border: 1px solid #e1e1e1;
+    padding: 10px 10px;
+}
+td a {
+    color: #299cf6;
+    text-decoration: underline;
+}
+/*学习*/
+.learn,
+.life,
+.tools {
+    margin: 20px auto 40px;
+    box-sizing: border-box;
+}
+.learn .works {
+    margin-top: 40px;
+}
+
+/*生活*/
+.life h2 {
+    writing-mode: vertical-lr;
+    line-height: 100px;
+    letter-spacing: 20px;
+    font-size: 40px;
+    font-family: "Songti TC", "宋体";
+}
+.life .resume-img img {
+    width: 240px;
+}
+.life .resume-text p {
+    font-size: 20px;
+    color: #666666;
+    line-height: 2em;
+    text-indent: 2em;
+    margin-bottom: 20px;
+    padding: 0 30px;
+}
+.life h3 {
+    font-weight: normal;
+    letter-spacing: 3px;
+    font-size: 22px;
+}
+
+/*工具*/
+.tools h2 {
+    font-weight: normal;
+    padding-bottom: 20px;
+}
